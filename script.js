@@ -6,7 +6,7 @@ const resultGrid = document.getElementById('result-flex');
 
 // From API Async loading movies
 async function loadMovies(searchTerm){
-    await fetch(`https://omdbapi.com/?s=${searchTerm}&page=1&apikey=68483184`)
+    await fetch(`https://omdbapi.com/?s=${searchTerm}&page=1&apikey=94397865`)
         .then((response) => response.json())
         .then((data) => {
             if(data.Response == "True")  displayMovieList(data.Search);
@@ -48,7 +48,7 @@ function displayMovieList(movies){
         movieListItem.classList.add('search-list-item');
         
         // Hits another API where Actors working in the film are stored
-        fetch(`http://www.omdbapi.com/?i=${movies[idx].imdbID}&apikey=68483184`)
+        fetch(`http://www.omdbapi.com/?i=${movies[idx].imdbID}&apikey=94397865`)
         .then((response) => response.json())
         .then((data) => {
             if(movies[idx].Poster != "N/A")
@@ -127,7 +127,7 @@ function loadMovieDetails(){
     const searchListMovies = searchList.querySelectorAll('.search-list-item');
     searchListMovies.forEach(movie => {
         movie.addEventListener('click', () => {
-            fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=68483184`)
+            fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=94397865`)
             .then((response) => response.json())
             .then((data) => {
                 document.querySelector('.searchbar-logo').style.display = "none";
@@ -166,7 +166,7 @@ function displayMovieDetails(details){
 // Function to reset searchbar to it's initial state
 function resetBar() {
     movieSearchBox.value = "";
-    movieSearchBox.placeholder = "Search IMDB"
+    movieSearchBox.placeholder = "Search for any Movie..."
     movieSearchBox.style.borderBottomLeftRadius = "25px";
     searchBtn.style.borderBottomRightRadius = "25px";
 }
