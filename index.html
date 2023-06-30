@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>IMDB Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="favourite.css">
+
+  <!-- Importing Tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Importing Font awesome -->
+  <script src="https://kit.fontawesome.com/f5caad0c88.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="flex-col">
+
+  <main class="flex-col justify-center items-center search-implement">
+    <!-- Site Logo -->
+    <div class="searchbar-logo">
+      <a href="./index.html"><img src="./images/IMDBLogo.png" alt="site-logo" class="shadow-2xl"></a>
+    </div>
+
+    <!-- Search bar main-section-->
+    <div class="flex shadow-xl m-auto" id="search-bar">
+      <input type="search" class="h-10 p-6 pl-4 text-white search-query form-control"
+        placeholder="Search for any Movie..." id="movie-search-box" onkeyup="findMovies()" onclick="findMovies()">
+      <div class="bg-sky-700 search-btn flex justify-center items-center search-btn">
+        <i class="fa-solid fa-magnifying-glass text-lg block"></i>
+      </div>
+    </div>
+  
+    <div class="flex-col search-list shadow-xl" id="search-list">
+      <!-- List will be shown here -->
+    </div>
+  </main>
+
+  <!-- Movie details page -->
+  <section class="flex result-flex" id="result-flex">
+      <!-- After clicking on search result -->
+  </section>
+
+  <!-- Button to goto Favourite List page -->
+  <button class="text-box">
+    <a href="favourite.html" class="btn btn-white btn-animate">Goto Favourite list</a>
+  </button>
+
+  <script src="script.js"></script>
+  <script src="favourite.js"></script>
+</body>
+
+</html>

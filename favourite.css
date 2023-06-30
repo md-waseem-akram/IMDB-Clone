@@ -1,0 +1,49 @@
+
+#favourite-result {
+    opacity: 0;
+    margin: auto;
+    width: fit-content;
+    transition: 0.1s linear opacity;
+}
+
+.fav-list {
+    display: grid;
+    margin: 0px auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fav-res-img:hover {
+    background-size: 100.9%;
+}
+
+.fav-res-img {
+    width: 350px;
+    height: 525px;
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s linear background-size;
+}
+
+.remove-fav {
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: o.2s ease opacity, o.2s ease background-color, o.2s ease color;
+}
+
+.remove-fav:hover {
+    opacity: 1;
+    background-color: black;
+    color: rgb(235, 84, 84);
+}
+
+.favourite-btn {
+    margin: auto;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}

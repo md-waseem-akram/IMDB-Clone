@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Favourite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="favourite.css">
+    <!-- Importing Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importing Font awesome -->
+    <script src="https://kit.fontawesome.com/f5caad0c88.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Home button for going back to Home page -->
+    <button
+        class="favourite-btn cursor-pointer hover:bg-black hover:shadow-2xl hover:border-0 hover:opacity-100 border rounded opacity-50 p-2 w-36 text-center">
+        <a href="./index.html">Home</a>
+    </button>
+
+    <!-- Button to view Favoutite movies -->
+    <button onclick="enterFavPage()"
+        class="favourite-btn cursor-pointer hover:bg-black hover:shadow-2xl hover:border-0 hover:opacity-100 border rounded opacity-50 p-2 w-36 text-center">
+        Favourite
+    </button>
+
+    <!-- Favourite movies page content -->
+    <div id="favourite-result" class="flex-col">
+        <div class="flex justify-between items-center mb-10">
+            <h1 class="text-4xl font-bold">My Favourite</h1>
+            <i onclick="clearList()" class="fa-solid fa-xmark hover:text-red-500 hover:text-xl"></i>
+        </div>
+        <div class="gap-y-20 gap-x-10 fav-list">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="favourite.js"></script>
+
+</body>
+
+</html>
